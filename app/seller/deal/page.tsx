@@ -138,7 +138,7 @@ export default function DealDetailsPage() {
     const fetchSellerProfile = async () => {
       try {
         const token = localStorage.getItem("token")
-        const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+        const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
         const response = await fetch(`${apiUrl}/sellers/profile`, {
           headers: {
@@ -175,7 +175,7 @@ export default function DealDetailsPage() {
       try {
         setLoading(true)
         const token = localStorage.getItem("token")
-        const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+        const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
         if (!token) {
           router.push("/seller/login?error=no_token")
@@ -216,7 +216,7 @@ export default function DealDetailsPage() {
     try {
       setLoadingBuyers(true)
       const token = localStorage.getItem("token")
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
       const response = await fetch(`${apiUrl}/deals/${dealId}/status-summary`, {
         headers: {
@@ -379,7 +379,7 @@ export default function DealDetailsPage() {
   }
 
   const downloadDocument = (doc: DealDocument) => {
-    const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+    const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
     const link = document.createElement("a")
     link.href = `${apiUrl}/uploads/deal-documents/${doc.filename}`
     link.download = doc.originalName

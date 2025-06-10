@@ -16,7 +16,7 @@ interface RegisterFormData {
   email: string
   password: string
   confirmPassword: string
-  companyName: string
+  // companyName: string
 }
 
 export default function RegisterPage() {
@@ -27,7 +27,7 @@ export default function RegisterPage() {
     email: "",
     password: "",
     confirmPassword: "",
-    companyName: "",
+    // companyName: "",
   })
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
@@ -101,9 +101,9 @@ export default function RegisterPage() {
       newErrors.confirmPassword = "Passwords do not match"
     }
 
-    if (!formData.companyName.trim()) {
-      newErrors.companyName = "Company name is required"
-    }
+    // if (!formData.companyName.trim()) {
+    //   newErrors.companyName = "Company name is required"
+    // }
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -122,7 +122,7 @@ export default function RegisterPage() {
 
     try {
       // Get API URL from localStorage or use default
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
       console.log("Register page - Submitting registration to:", apiUrl)
 
@@ -217,7 +217,7 @@ export default function RegisterPage() {
   // Handle Google OAuth login
   const handleGoogleLogin = () => {
     // Get API URL from localStorage or use default
-    const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+    const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
     console.log("Register page - Redirecting to Google OAuth:", `${apiUrl}/buyers/google`)
 
     // Redirect to Google OAuth endpoint
@@ -368,7 +368,7 @@ export default function RegisterPage() {
                 {errors.confirmPassword && <p className="mt-1 text-sm text-red-600">{errors.confirmPassword}</p>}
               </div>
 
-              <div>
+              {/* <div>
                 <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-1">
                   Company Name
                 </label>
@@ -381,7 +381,7 @@ export default function RegisterPage() {
                   className={`${errors.companyName ? "border-red-300" : ""} py-5`}
                 />
                 {errors.companyName && <p className="mt-1 text-sm text-red-600">{errors.companyName}</p>}
-              </div>
+              </div> */}
 
               <Button
                 type="submit"

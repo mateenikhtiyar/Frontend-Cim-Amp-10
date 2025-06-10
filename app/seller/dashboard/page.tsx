@@ -187,7 +187,7 @@ function DealCard({
 
     try {
       const token = localStorage.getItem("token")
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
       const response = await fetch(`${apiUrl}/deals/${deal._id}/upload-documents`, {
         method: "POST",
@@ -225,7 +225,7 @@ function DealCard({
   }
 
   const downloadDocument = (doc: DealDocument) => {
-    const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+    const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
     // Create a download link
     const link = document.createElement("a")
@@ -464,7 +464,7 @@ export default function SellerDashboardPage() {
     const fetchSellerProfile = async () => {
       try {
         const token = localStorage.getItem("token")
-        const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+        const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
         const response = await fetch(`${apiUrl}/sellers/profile`, {
           headers: {
@@ -556,7 +556,7 @@ export default function SellerDashboardPage() {
       try {
         setLoading(true)
         const token = localStorage.getItem("token")
-        const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+        const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
         if (!token) {
           router.push("/seller/login?error=no_token")
@@ -606,7 +606,7 @@ export default function SellerDashboardPage() {
         try {
           setLoadingBuyers(true)
           const token = localStorage.getItem("token")
-          const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+          const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
           console.log(
             "🔍 Fetching matching buyers for deals:",
@@ -749,7 +749,7 @@ export default function SellerDashboardPage() {
 
     try {
       setSending(true)
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
       const token = localStorage.getItem("token")
 
       if (!token) {
@@ -888,7 +888,7 @@ export default function SellerDashboardPage() {
       formData.append("file", file)
 
       const token = localStorage.getItem("token")
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
       const response = await fetch(`${apiUrl}/sellers/upload-profile-picture`, {
         method: "POST",
@@ -928,7 +928,7 @@ export default function SellerDashboardPage() {
     if (profileName.trim()) {
       try {
         const token = localStorage.getItem("token")
-        const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+        const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
         const response = await fetch(`${apiUrl}/sellers/${sellerProfile?._id}`, {
           method: "PATCH",
@@ -1014,7 +1014,7 @@ export default function SellerDashboardPage() {
 
     try {
       const token = localStorage.getItem("token")
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
       // Close the deal with the selected buyer
       const closeResponse = await fetch(`${apiUrl}/deals/${selectedDealForCompletion._id}/close`, {
@@ -1076,7 +1076,7 @@ export default function SellerDashboardPage() {
 
     try {
       const token = localStorage.getItem("token")
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
       // Prepare winningBuyerId: only send if buyerFromCIM is true
       const body: any = {
@@ -1123,7 +1123,7 @@ export default function SellerDashboardPage() {
   const fetchDealStatusSummary = async (dealId: string) => {
     try {
       const token = localStorage.getItem("token")
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
       const response = await fetch(`${apiUrl}/deals/${dealId}/status-summary`, {
         headers: {

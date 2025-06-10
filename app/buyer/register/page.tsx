@@ -102,9 +102,9 @@ export default function BuyerRegisterPage() {
       newErrors.confirmPassword = "Passwords do not match"
     }
 
-    // if (!formData.companyName.trim()) {
-    //   newErrors.companyName = "Company name is required"
-    // }
+    if (!formData.companyName.trim()) {
+      newErrors.companyName = "Company name is required"
+    }
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -123,7 +123,7 @@ export default function BuyerRegisterPage() {
 
     try {
       // Get API URL from localStorage or use default
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
 
       console.log("Register page - Submitting registration to:", apiUrl)
 
@@ -221,7 +221,7 @@ export default function BuyerRegisterPage() {
   // Handle Google OAuth login
   const handleGoogleLogin = () => {
     // Get API URL from localStorage or use default
-    const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+    const apiUrl = localStorage.getItem("apiUrl") || "http://localhost:3001"
     console.log("Register page - Redirecting to Google OAuth:", `${apiUrl}/buyers/google`)
 
     // Redirect to Google OAuth endpoint
@@ -372,7 +372,7 @@ export default function BuyerRegisterPage() {
                 {errors.confirmPassword && <p className="mt-1 text-sm text-red-600">{errors.confirmPassword}</p>}
               </div>
 
-              {/* <div>
+              <div>
                 <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-1">
                   Company Name
                 </label>
@@ -385,7 +385,7 @@ export default function BuyerRegisterPage() {
                   className={`${errors.companyName ? "border-red-300" : ""} py-5`}
                 />
                 {errors.companyName && <p className="mt-1 text-sm text-red-600">{errors.companyName}</p>}
-              </div> */}
+              </div>
 
               <Button
                 type="submit"
