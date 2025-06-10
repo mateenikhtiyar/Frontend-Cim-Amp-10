@@ -47,7 +47,7 @@ const BUSINESS_MODELS = ["Recurring Revenue", "Project-Based", "Asset Light", "A
 const MANAGEMENT_PREFERENCES = ["Owner(s) Departing", "Owner(s) Staying", "Management Team Staying"]
 
 // Default API URL
-const DEFAULT_API_URL = "http://168.231.74.35:3001"
+const DEFAULT_API_URL = "https://168.231.74.35:3001"
 
 // Type for hierarchical selection
 interface HierarchicalSelection {
@@ -417,7 +417,7 @@ export default function CompanyProfilePage() {
         return
       }
 
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
 
       const response = await fetch(`${apiUrl}/buyers/profile`, {
         headers: {
@@ -1450,7 +1450,7 @@ export default function CompanyProfilePage() {
   const getProfilePictureUrl = (path: string | null) => {
     if (!path) return null
 
-    const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+    const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
 
     if (path.startsWith("http://") || path.startsWith("https://")) {
       return path

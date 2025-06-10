@@ -77,7 +77,7 @@ export default function DealsPage() {
         return []
       }
 
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
 
       // Map status to API endpoint
       let endpoint = ""
@@ -210,7 +210,7 @@ export default function DealsPage() {
       setApiError(null)
       const token = localStorage.getItem("token")
       const currentBuyerId = localStorage.getItem("userId")
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
 
       console.log("Token exists:", !!token)
       console.log("Buyer ID:", currentBuyerId)
@@ -427,7 +427,7 @@ export default function DealsPage() {
         return
       }
 
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
 
       const response = await fetch(`${apiUrl}/company-profiles/my-profile`, {
         method: "GET",
@@ -463,7 +463,7 @@ export default function DealsPage() {
         return
       }
 
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
 
       const response = await fetch(`${apiUrl}/buyers/profile`, {
         headers: {
@@ -582,7 +582,7 @@ export default function DealsPage() {
   const getProfilePictureUrl = (path: string | null) => {
     if (!path) return null
 
-    const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+    const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
 
     if (path.startsWith("http://") || path.startsWith("https://")) {
       return path

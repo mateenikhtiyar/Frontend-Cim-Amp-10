@@ -73,7 +73,7 @@ export default function DealsPage() {
         return
       }
 
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
       // Remove status filtering - fetch all deals
       const url = `${apiUrl}/buyers/deals`
 
@@ -167,7 +167,7 @@ export default function DealsPage() {
         return false
       }
 
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
       const endpoint = action === "reject" ? "reject" : "interest"
       const url = `${apiUrl}/deal-tracking/${endpoint}/${dealId}`
 
@@ -255,7 +255,7 @@ export default function DealsPage() {
         return
       }
 
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
 
       const response = await fetch(`${apiUrl}/company-profiles/my-profile`, {
         method: "GET",
@@ -291,7 +291,7 @@ export default function DealsPage() {
         return
       }
 
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
 
       const response = await fetch(`${apiUrl}/buyers/profile`, {
         headers: {
@@ -421,7 +421,7 @@ export default function DealsPage() {
   const getProfilePictureUrl = (path: string | null) => {
     if (!path) return null
 
-    const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+    const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
 
     if (path.startsWith("http://") || path.startsWith("https://")) {
       return path

@@ -6,7 +6,7 @@ interface UpdateDealStatusParams {
 
 export async function updateDealStatus({ dealId, status, finalSalePrice }: UpdateDealStatusParams) {
   const token = localStorage.getItem("token")
-  const apiUrl = localStorage.getItem("apiUrl") || process.env.NEXT_PUBLIC_API_URL || "http://168.231.74.35:3001"
+  const apiUrl = localStorage.getItem("apiUrl") || process.env.NEXT_PUBLIC_API_URL || "https://168.231.74.35:3001"
 
   if (!token) {
     throw new Error("Authentication required")

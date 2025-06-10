@@ -162,7 +162,7 @@ export default function SellerRegisterPage() {
   // Handle Google OAuth login
   const handleGoogleLogin = () => {
     console.log("Register page - Redirecting to Google OAuth")
-    window.location.href = "http://168.231.74.35:3001/sellers/google/callback"
+    window.location.href = "https://168.231.74.35:3001/sellers/google/callback"
   }
 
   return (
