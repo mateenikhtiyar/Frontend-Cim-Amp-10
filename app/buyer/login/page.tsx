@@ -83,7 +83,7 @@ export default function BuyerLoginPage() {
       console.log("Login page - Attempting login with:", email)
 
       // Get API URL from localStorage or use default
-      const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
 
       // Use fetch directly for more control
       const response = await fetch(`${apiUrl}/auth/login`, {
@@ -157,7 +157,7 @@ export default function BuyerLoginPage() {
   const handleGoogleLogin = () => {
     try {
       // Get API URL from localStorage or use default
-      const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
       console.log("Login page - Redirecting to Google OAuth:", `${apiUrl}/buyers/google`)
 
       // Store the current page as the return URL

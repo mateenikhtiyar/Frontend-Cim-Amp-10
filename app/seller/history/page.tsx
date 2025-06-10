@@ -73,7 +73,7 @@ export default function DealsHistoryPage() {
     const fetchSellerProfile = async () => {
       try {
         const token = localStorage.getItem("token")
-        const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
+        const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
 
         const response = await fetch(`${apiUrl}/sellers/profile`, {
           headers: {
@@ -107,7 +107,7 @@ export default function DealsHistoryPage() {
         setIsLoadingDeals(true)
         setDealsError(null)
         const token = localStorage.getItem("token")
-        const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
+        const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
 
         const response = await fetch(`${apiUrl}/deals/completed`, {
           headers: {
@@ -175,7 +175,7 @@ export default function DealsHistoryPage() {
       formData.append("file", file)
 
       const token = localStorage.getItem("token")
-      const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
 
       const response = await fetch(`${apiUrl}/sellers/upload-profile-picture`, {
         method: "POST",
@@ -206,7 +206,7 @@ export default function DealsHistoryPage() {
     if (profileName.trim()) {
       try {
         const token = localStorage.getItem("token")
-        const apiUrl = localStorage.getItem("apiUrl") || "https://168.231.74.35:3001"
+        const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
 
         const response = await fetch(`${apiUrl}/sellers/${sellerProfile?._id}`, {
           method: "PATCH",

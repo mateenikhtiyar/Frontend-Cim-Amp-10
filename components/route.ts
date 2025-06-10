@@ -13,7 +13,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
     }
 
     // Get the API URL from environment or use default
-    const apiUrl = process.env.API_URL || "https://168.231.74.35:3001"
+    const apiUrl = process.env.API_URL || "http://168.231.74.35:3001"
 
     // Forward the request to the backend API
     const response = await fetch(`${apiUrl}/deals/${dealId}`, {
