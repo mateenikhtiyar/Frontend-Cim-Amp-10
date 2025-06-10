@@ -16,7 +16,7 @@ interface RegisterFormData {
   email: string
   password: string
   confirmPassword: string
-  companyName: string
+  // companyName: string
 }
 
 export default function BuyerRegisterPage() {
@@ -27,7 +27,7 @@ export default function BuyerRegisterPage() {
     email: "",
     password: "",
     confirmPassword: "",
-    companyName: "",
+    // companyName: "",
   })
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
@@ -102,9 +102,9 @@ export default function BuyerRegisterPage() {
       newErrors.confirmPassword = "Passwords do not match"
     }
 
-    if (!formData.companyName.trim()) {
-      newErrors.companyName = "Company name is required"
-    }
+    // if (!formData.companyName.trim()) {
+    //   newErrors.companyName = "Company name is required"
+    // }
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -136,7 +136,7 @@ export default function BuyerRegisterPage() {
           fullName: formData.fullName,
           email: formData.email,
           password: formData.password,
-          companyName: formData.companyName,
+          // companyName: formData.companyName,
         }),
       })
 
@@ -372,7 +372,7 @@ export default function BuyerRegisterPage() {
                 {errors.confirmPassword && <p className="mt-1 text-sm text-red-600">{errors.confirmPassword}</p>}
               </div>
 
-              <div>
+              {/* <div>
                 <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-1">
                   Company Name
                 </label>
@@ -385,7 +385,7 @@ export default function BuyerRegisterPage() {
                   className={`${errors.companyName ? "border-red-300" : ""} py-5`}
                 />
                 {errors.companyName && <p className="mt-1 text-sm text-red-600">{errors.companyName}</p>}
-              </div>
+              </div> */}
 
               <Button
                 type="submit"
