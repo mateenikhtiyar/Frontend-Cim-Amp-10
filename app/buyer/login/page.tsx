@@ -86,7 +86,7 @@ export default function BuyerLoginPage() {
       const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
 
       // Use fetch directly for more control
-      const response = await fetch(`${apiUrl}/auth/login`, {
+      const response = await fetch(`http://168.231.74.35:3001/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
