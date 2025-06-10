@@ -127,7 +127,7 @@ export default function BuyerRegisterPage() {
 
       console.log("Register page - Submitting registration to:", apiUrl)
 
-      const response = await fetch(`http://168.231.74.35:3001/buyers/register`, {
+      const response = await fetch(`${apiUrl}/buyers/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
