@@ -113,7 +113,7 @@ export default function SellerLoginPage() {
   const handleGoogleLogin = () => {
     try {
       // Get API URL from localStorage or use default
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "https://api.cimamplify.com"
       console.log("Login page - Redirecting to Google OAuth:", `${apiUrl}/sellers/google`)
 
       // Store the current page as the return URL

@@ -41,7 +41,7 @@ const BUSINESS_MODELS = ["Recurring Revenue", "Project-Based", "Asset Light", "A
 const MANAGEMENT_PREFERENCES = ["Owner(s) Departing", "Owner(s) Staying", "Management Team Staying"]
 
 // Default API URL
-const DEFAULT_API_URL = "http://168.231.74.35:3001"
+const DEFAULT_API_URL = "https://api.cimamplify.com"
 
 // Type for hierarchical selection
 interface HierarchicalSelection {

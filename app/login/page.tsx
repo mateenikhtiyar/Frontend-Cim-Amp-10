@@ -82,7 +82,7 @@ export default function LoginPage() {
       console.log("Login page - Attempting login with:", email)
 
       // Get API URL from localStorage or use default
-      const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+      const apiUrl = localStorage.getItem("apiUrl") || "https://api.cimamplify.com"
 
       // Use fetch directly for more control
       const response = await fetch(`${apiUrl}/auth/login`, {
@@ -148,7 +148,7 @@ export default function LoginPage() {
   // Handle Google OAuth login
   const handleGoogleLogin = () => {
     // Get API URL from localStorage or use default
-    const apiUrl = localStorage.getItem("apiUrl") || "http://168.231.74.35:3001"
+    const apiUrl = localStorage.getItem("apiUrl") || "https://api.cimamplify.com"
     console.log("Login page - Redirecting to Google OAuth:", `${apiUrl}/buyers/google`)
 
     // Redirect to Google OAuth endpoint
